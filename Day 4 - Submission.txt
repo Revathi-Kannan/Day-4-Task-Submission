@@ -1,0 +1,98 @@
+//1.	For the given JSON Iterate over all for loops (for, for in, for of, for Each)
+
+//for in
+
+const object1 = {
+    "name": "Keerthi",
+    "Contact": 123456789,
+    "email": "keerthi@gmail.com"
+}
+
+for(let key in object1){
+    console.log(`${key}: ${object1[key]}`)
+}
+
+// for of - It will take only the value of each keys
+
+const object2 = {
+    "name" : "Revathi",
+    "Gender": "Female",
+    "Hobbies" : ["Badminton", "TT", "Music"] 
+}
+
+for( let value of Object.values(object2)){
+
+    console.log((value))
+}
+
+
+//FOR EACH
+
+const object3 = {
+
+    "name" : ["Revathi", "RK","Shankar"],
+    "Gender": ["Female","Female","Male"],
+    "Hobbies" : ["Badminton", "TT", "Music"]
+}
+
+Object.entries(object3).forEach(([key, value]) =>
+
+{
+    console.log(`${key}: ${value}`)
+}
+
+
+
+)
+
+
+//2.	Create your own resume data in JSON format
+
+const revathiresume = {
+
+    Profile: ["Performing various functions, which primarily involves providing data, reports, and analyses in support of an organization’s plan to facilitate data driven decision-making."],
+
+    name: "Revathi",
+    email: "kannanrevathi22@gmail.com",
+    mobile: 1234567891,
+    contact: {
+    DOB: "MM/DD/YYYY",
+Linkedin: "linkedin.com/in/revathi-kannan-b122a81b9"
+    },
+    
+    From: "Chennai",
+    Gender: "Female",
+    Nationality: "Indian",
+    Languages_Knows: ["Tamil", "English"],
+    
+Skills: 
+["Power BI","VB Script", "SSMS", "Informatica-Developer"],
+
+Education: {
+
+    SSC_HSC : "LGHMS",
+    UG_Grade : "BCA - Madras University",
+    PG_Grade : "MCA - Madras University"
+    
+},
+
+Certification : ["Automation Anywhere", "SCRUM", "SIX SIGMA"],
+
+Experience: {
+
+    2015_2018: "ABC TECHNOLOGY PVT. LMT",
+    Responsibilities: 
+    ["Monitor data to identify changes in financial and business trends.Maintain databases and perform updates as necessary to ensure accuracy.", 
+    "Automation in the process to reduce the time saving using Visual basic and saved FTE accordingly."],   
+
+    2018_2023: "EFG TECHNOLGOY PVT. LTD",
+    Responsibilities: ["Provide analyses for large datasets necessary for decisions using actionable insights.",
+    "Responsible for carrying out complex analysis of datasets and conduct appropriate data validation"]
+           
+},
+
+Achievement: "Received an award for automating the process and saving 2.5 FTE's.",
+
+}
+console.log(JSON.stringify(revathiresume, null,2))
+
